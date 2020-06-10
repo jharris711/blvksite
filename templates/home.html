@@ -1,10 +1,45 @@
 {% extends "base.html" %}
 {% load static %}
 {% load cloudinary %}
-{%  block content %}
+{% block content %}
+{% include "components/navbar.html" %}
 
-
-<h1>Home Page</h1>
+<div class="container-fluid" id="site-section">
+    <video autoplay muted loop id="myVideo">
+      <source src="{% static 'video/glitch2.mp4' %}" type="video/mp4">
+    </video>
+    <div class="row align-items-center justify-content-center animate__animated animate__fadeIn" id="homeContent">
+        <div class="col-md-8">
+            <ul class="list-group list-group-flush">
+                <a href="">
+                    <li class="list-group-item lgiTrans">
+                        About
+                    </li>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="{% url 'core:mixes' %}">
+                    <li class="list-group-item lgiTrans">
+                        Mixes and Live Sets
+                    </li>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="">
+                    <li class="list-group-item lgiTrans">
+                        Twitch
+                    </li>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="">
+                    <li class="list-group-item lgiTrans">
+                        FaceBook
+                    </li>
+                </a>
+                <div class="dropdown-divider"></div>
+            </ul>
+        </div>
+    </div>
+</div>
+{% include "components/footer.html" %}
 
 
 {% endblock %}

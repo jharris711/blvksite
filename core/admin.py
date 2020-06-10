@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Soundcloud
 
-# Register your models here.
+
+admin.site.register(Soundcloud)
