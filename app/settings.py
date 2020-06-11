@@ -11,7 +11,7 @@ if os.path.isfile(dotenv_file):
     load_dotenv(dotenv_file)
 ENVIRONMENT = os.getenv('ENVIRONMENT', 'production')
 SECRET_KEY = os.getenv('SECRET_KEY')
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'blvksite.herokuapp.com']
 
 INSTALLED_APPS = [
     'cloudinary',
