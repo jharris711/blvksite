@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+{% load cloudinary %}
+{% block content %}
+{% include "components/navbar.html" with active="/streams" %}
+
+<div class="container-fluid" id="site-section">
+    <video autoplay muted loop id="myVideo">
+        <source src="{% static 'video/glitch6.mp4' %}" type="video/mp4">
+    </video>
+</div>
+
+
+{% endblock %}

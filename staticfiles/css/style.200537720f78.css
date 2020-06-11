@@ -1,0 +1,126 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0 auto;
+    font-family: 'Source Code Pro', monospace;
+    color: #edf0f5;
+    overflow: scroll !important;
+}
+
+a {
+    color: #edf0f5;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #edf0f5;
+    text-decoration: underline;
+}
+
+
+
+.animate__animated.animate__fadeIn {
+    --animate-duration: 2s;
+}
+.animate__animated.animate__fadeOut {
+    --animate-duration: 3s;
+}
+
+.site-wrap:before {
+    -webkit-transition: .3s all ease-in-out;
+    -o-transition: .3s all ease-in-out;
+    transition: .3s all ease-in-out;
+    background: rgba(0, 0, 0, 0.6);
+    content: "";
+    position: absolute;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden; 
+}
+  
+.site-wrap {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.site-section {
+    padding: 3em 0; }
+    @media (min-width: 768px) {
+      .site-section {
+        padding: 7em 0; } }
+    .site-section.site-section-sm {
+      padding: 4em 0; 
+}
+
+
+.lgiTrans {
+    background-color: rgba(0, 0, 0, 0);
+    color: edf0f5;
+    border: 2px rgba(0,0,0,0.0) solid;
+}
+.lgiTrans:hover {
+    background-color: rgba(30, 30, 30, .8);
+    color: edf0f5;
+    border: 2px #edf0f5 inset;
+}
+
+.social-link {
+    text-decoration: none !important;
+    position: relative !important;
+}
+.social-link:hover {
+    text-decoration: none !important;
+    color: whitesmoke !important;
+}
+
+.soc-i {
+    font-size: xx-large;
+}
+
+#land-cont {
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+#site-section {
+    position: relative;
+    min-height: 80vh;
+    min-width: 100vw;
+}
+
+#landingImg {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -10;
+}
+
+#bg-custom {
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
+#homeContent {
+    position: relative;
+    top: 100px;
+}
+
+.overflow-sc {
+    overflow: scroll;
+}

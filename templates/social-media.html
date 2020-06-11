@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+{% load cloudinary %}
+{% block content %}
+{% include "components/navbar.html" with active="/social" %}
+
+<div class="container-fluid align-items-center justify-content-center" id="site-section">
+    <video autoplay muted loop id="myVideo">
+        <source src="{% static 'video/glitch4.mp4' %}" type="video/mp4">
+    </video>
+    <h1 class="animate__animated animate__fadeIn">Social Media</h1>
+    <a href="{% url 'core:home' %}" class="animate__animated animate__fadeIn">Back to Home</a>
+    <div class="row pt-2 animate__animated animate__fadeIn text-center align-items-center justify-content-center">
+        <div class="col text-center align-items-center justify-content-center">
+            <h3>Facebook</h3>
+        </div>
+    </div>
+    <div class="row pt-2 animate__animated animate__fadeIn text-center align-items-center justify-content-center">
+        <div class="col-8">
+            <div class="fb-page pt-2" data-href="https://www.facebook.com/bvksite/" data-tabs="timeline" data-width="350" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/bvksite/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/bvksite/">Blvksite</a></blockquote></div>
+        </div>
+    </div>
+    <div class="row mt-4 pt-2 animate__animated animate__fadeIn">
+        <div class="col text-center align-items-center justify-content-center">
+            <h3>Twitter</h3>
+        </div>
+    </div>
+    <div class="row pt-2 animate__animated animate__fadeIn text-center align-items-center justify-content-center ">
+        <div class="col-8">
+            <a class="twitter-timeline pt-2" href="https://twitter.com/blvksite?ref_src=twsrc%5Etfw">Tweets by blvksite</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

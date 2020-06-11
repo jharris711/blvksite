@@ -17,3 +17,13 @@ class MixListView(ListView):
     model = Soundcloud
     paginate_by = 8
     template_name = "mixes-and-tracks.html"
+
+
+class SocialMediaView(View):
+    def get(self, *args, **kwargs):
+        return render(self.request, "social-media.html", status=200)
+
+
+class StreamsView(View):
+    def get(self, *args, **kwargs):
+        return render(self.request, "streams.html", status=200)

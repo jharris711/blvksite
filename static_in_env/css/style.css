@@ -75,6 +75,7 @@ a:hover {
 
 .social-link {
     text-decoration: none !important;
+    position: relative !important;
 }
 .social-link:hover {
     text-decoration: none !important;
@@ -89,11 +90,6 @@ a:hover {
     min-width: 100vw;
     min-height: 100vh;
 }
-
-#ftr-custom {
-    min-width: 100vw;
-}
-
 
 #site-section {
     position: relative;

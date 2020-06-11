@@ -2,7 +2,7 @@
 {% load static %}
 {% load cloudinary %}
 {%  block content %}
-{% include "components/navbar.html" %}
+{% include "components/navbar.html" with active="/mixes"  %}
 
 
 <div class="container">
@@ -10,7 +10,7 @@
         <source src="{% static 'video/glitch3.mp4' %}" type="video/mp4">
     </video>
     <h1 class="text-left pt-4 animate__animated animate__fadeIn">MIXES &amp; TRACKS</h1>
-    <a href="{% url 'core:home' %}" class="animate__animated animate__fadeIn">Back</a>
+    <a href="{% url 'core:home' %}" class="animate__animated animate__fadeIn">Back to Home</a>
     <div class="row align-items-center justify-content-center mt-4 animate__animated animate__fadeIn">
         <div class="col-8">
             <!-- Top Pagination -->
@@ -59,7 +59,7 @@
         </div>
     </div>
 </div>
-
+{% include "components/footer.html" %}
 
 
 {% endblock %}

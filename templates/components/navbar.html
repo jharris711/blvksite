@@ -1,11 +1,34 @@
 {% load static %}
-<nav class="navbar navbar-dark bg-custom animate__animated animate__fadeIn">
-    <a class="navbar-brand" href="{% url 'core:home' %}">
-      <img src="{% static 'images/blkste2.svg' %}" width="30" height="30" class="d-inline-block align-top" alt="">
-      BLVKSITE.
-    </a>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-custom animate__animated animate__fadeIn">
+  <a class="navbar-brand" href="{% url 'core:home' %}">
+    <img src="{% static 'images/blkste2.svg' %}" width="30" height="30" class="d-inline-block align-top" alt="">
+    BLVKSITE.
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto mr-5">
+      <li class="nav-item {% if active == '/home' %}active{% endif %}">
+        <a class="nav-link" href="{% url 'core:home' %}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item {% if active == '/about' %}active{% endif %}">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item {% if active == '/mixes' %}active{% endif %}">
+        <a class="nav-link" href="{% url 'core:mixes' %}">Mixes/Tracks</a>
+      </li>
+      <li class="nav-item {% if active == '/streams' %}active{% endif %}">
+        <a class="nav-link" href="{% url 'core:streams' %}">Streams</a>
+      </li>
+      <li class="nav-item {% if active == '/social' %}active{% endif %}">
+        <a class="nav-link" href="{% url 'core:social' %}">Socials</a>
+      </li>
+      <li class="nav-item {% if active == '/contact' %}active{% endif %}">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+  </div>
 </nav>
-
-
-
 
