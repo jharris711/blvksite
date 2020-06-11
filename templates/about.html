@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+{% load cloudinary %}
+{%  block content %}
+{% include "components/navbar.html" with active="/about"  %}
+
+
+<div class="container">
+    <video autoplay muted loop id="myVideo">
+        <source src="{% static 'video/glitch8.mp4' %}" type="video/mp4">
+    </video>
+    <h1 class="text-left pt-4 animate__animated animate__fadeIn">About</h1>
+    <a href="{% url 'core:home' %}" class="animate__animated animate__fadeIn">Back to Home</a>
+    <div class="row text-center align-items-center justify-content-center">
+        <div class="col-8 mt-3 pt-4 animate__animated animate__fadeIn">
+            <h3><i class="fas fa-skull-crossbones"></i> BLVKSITE</h3>
+            <div class="jumbotron bg-dark text-left">
+                {% for a in about %}
+                <p>{{ a.paragraph_one }}</p>
+                <hr>
+                <p>{{ a.paragraph_two }}</p>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="col-8 mt-3 pt-4 animate__animated animate__fadeIn">
+            <h3><i class="fas fa-camera-retro"></i> Pics</h3>
+            <div id="carouselExampleIndicators" class="carousel slide mt-5" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner"></div>
+                    {% for pic in pics %}
+                        {% if forloop.first %}
+                        <div class="carousel-item card active">
+                        {% else %}
+                        <div class="carousel-item card">
+                        {% endif %}
+                            {% cloudinary pic.image.public_id class="d-block w-100"  %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mt-5 mb-4 pt-4 animate__animated animate__fadeIn">
+    {% include "components/footer.html" %}
+</div>
+
+
+{% endblock %}

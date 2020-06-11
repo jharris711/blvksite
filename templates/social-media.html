@@ -4,7 +4,7 @@
 {% block content %}
 {% include "components/navbar.html" with active="/social" %}
 
-<div class="container-fluid align-items-center justify-content-center" id="site-section">
+<div class="container align-items-center justify-content-center">
     <video autoplay muted loop id="myVideo">
         <source src="{% static 'video/glitch4.mp4' %}" type="video/mp4">
     </video>
@@ -30,6 +30,9 @@
             <a class="twitter-timeline pt-2" href="https://twitter.com/blvksite?ref_src=twsrc%5Etfw">Tweets by blvksite</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
         </div>
     </div>
+</div>
+<div class="mt-5 pt-4 animate__animated animate__fadeIn">
+    {% include "components/footer.html" %}
 </div>
 
 

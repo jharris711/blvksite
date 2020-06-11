@@ -11,10 +11,11 @@
   <video autoplay muted loop id="myVideo">
     <source src="{% static 'video/glitch1.mp4' %}" type="video/mp4">
   </video>
-  <div class="row align-items-center justify-content-center" id="land-cont">
-    <div class="col-md-8 text-center m-0 p-0 fixed-top position-relative">
-      <a class="animate__animated animate__fadeIn m-0 p-0" id="nextPage" href="{% url 'core:home' %}">
-        <img src="{% static 'images/blkste2.svg' %}" alt=""/>
+  <div class="row text-center align-items-center justify-content-center" id="land-cont">
+    <div class="col-md-8 text-center align-items-center justify-content-center m-0 p-0 fixed-top position-relative">
+      <a class="m-0 p-0" id="nextPage" href="{% url 'core:home' %}">
+        <h1 class="mb-0 animate__animated animate__fadeIn" style="font-family: 'Creepster', cursive;">ENTER</h1>
+        <img class="animate__animated animate__fadeIn" src="{% static 'images/blkste2.svg' %}" alt=""/>
       </a>
     </div>
   </div>

@@ -4,10 +4,32 @@
 {% block content %}
 {% include "components/navbar.html" with active="/streams" %}
 
-<div class="container-fluid" id="site-section">
+<div class="container">
     <video autoplay muted loop id="myVideo">
         <source src="{% static 'video/glitch6.mp4' %}" type="video/mp4">
     </video>
+    <h1 class="text-left pt-4 animate__animated animate__fadeIn">Stream</h1>
+    <a href="{% url 'core:home' %}" class="animate__animated animate__fadeIn">Back to Home</a>
+    <div class="row align-items-center justify-content-center mt-4 animate__animated animate__fadeIn">
+        <div class="col text-center">
+            <!-- TWITCH -->
+            
+            <div id="twitch-embed"></div>
+            <!-- Load the Twitch embed script -->
+            <script src="https://embed.twitch.tv/embed/v1.js"></script>
+            <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+            <script type="text/javascript">
+                new Twitch.Embed("twitch-embed", {
+                    width: 600,
+                    height: 550,
+                    channel: "blvksite",
+                });
+            </script>
+        </div>
+    </div>
+</div>
+<div class="mt-5 pt-4 animate__animated animate__fadeIn">
+    {% include "components/footer.html" %}
 </div>
 
 

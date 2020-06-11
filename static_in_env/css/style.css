@@ -1,6 +1,6 @@
 body {
-    height: 100vh;
-    width: 100vw;
+    height: 100vh !important;
+    width: 100vw !important;
     padding: 0;
     margin: 0 auto;
     font-family: 'Source Code Pro', monospace;
@@ -27,30 +27,7 @@ a:hover {
     --animate-duration: 3s;
 }
 
-.site-wrap:before {
-    -webkit-transition: .3s all ease-in-out;
-    -o-transition: .3s all ease-in-out;
-    transition: .3s all ease-in-out;
-    background: rgba(0, 0, 0, 0.6);
-    content: "";
-    position: absolute;
-    z-index: 2000;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    visibility: hidden; 
-}
-  
-.site-wrap {
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    z-index: 2;
-    padding: 0;
-    margin: 0 auto;
-}
+
 
 .site-section {
     padding: 3em 0; }
@@ -113,7 +90,7 @@ a:hover {
 }
 
 #bg-custom {
-    background-color: rgba(0, 0, 0, 0.0);
+    background-color: rgba(0, 0, 0, 0.0) !important;
 }
 
 #homeContent {
