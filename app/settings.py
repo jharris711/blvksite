@@ -9,7 +9,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 dotenv_file = os.path.join(BASE_DIR, ".env")
 if os.path.isfile(dotenv_file):
     load_dotenv(dotenv_file)
-ENVIRONMENT = os.getenv('ENVIRONMENT', 'production')
+ENVIRONMENT = os.getenv('ENVIRONMENT', 'development')
 SECRET_KEY = os.getenv('SECRET_KEY')
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'blvksite.herokuapp.com']
 
