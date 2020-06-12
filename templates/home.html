@@ -8,7 +8,7 @@
     <video autoplay muted loop id="myVideo">
       <source src="{% static 'video/glitch2.mp4' %}" type="video/mp4">
     </video>
-    <div class="row align-items-center justify-content-center animate__animated animate__fadeIn" id="homeContent">
+    <div class="row align-items-center justify-content-center" id="homeContent">
         <div class="col-md-8">
             <ul class="list-group list-group-flush">
                 <a href="{% url 'core:about' %}">
@@ -45,7 +45,9 @@
         </div>
     </div>
 </div>
-{% include "components/footer.html" %}
+<div class="mt-5 mb-4 pt-4 animate__animated animate__fadeIn">
+    {% include "components/footer.html" %}
+</div>
 
 
 {% endblock %}
