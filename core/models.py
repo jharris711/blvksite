@@ -42,3 +42,12 @@ class About(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Instagram(models.Model):
+    id = models.IntegerField(primary_key=True)
+    title = models.CharField(max_length=50)
+    embed = models.TextField()
+
+    def __str__(self):
+        return f"{self.id}: {self.title}"

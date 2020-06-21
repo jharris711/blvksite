@@ -3,7 +3,7 @@ from django.core.mail import send_mail, BadHeaderError
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.http import HttpResponse
-from .models import Soundcloud, Pic, About
+from .models import Soundcloud, Pic, About, Instagram
 from .forms import ContactForm
 
 
@@ -43,7 +43,11 @@ class SocialMediaView(View):
 
 class StreamsView(View):
     def get(self, *args, **kwargs):
-        return render(self.request, "streams.html", status=200)
+        igs = Instagram.objects.all()
+        context = {
+            "igs": igs
+        }
+        return render(self.request, "streams.html", context, status=200)
 
 
 class ContactView(View):
