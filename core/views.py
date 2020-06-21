@@ -38,15 +38,16 @@ class MixListView(ListView):
 
 class SocialMediaView(View):
     def get(self, *args, **kwargs):
-        return render(self.request, "social-media.html", status=200)
-
-
-class StreamsView(View):
-    def get(self, *args, **kwargs):
         igs = Instagram.objects.all()
         context = {
             "igs": igs
         }
+        return render(self.request, "social-media.html", context, status=200)
+
+
+class StreamsView(View):
+    def get(self, *args, **kwargs):
+        context = {}
         return render(self.request, "streams.html", context, status=200)
 
 

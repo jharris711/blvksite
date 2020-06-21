@@ -45,9 +45,11 @@ class About(models.Model):
 
 
 class Instagram(models.Model):
-    id = models.IntegerField(primary_key=True)
     title = models.CharField(max_length=50)
     embed = models.TextField()
+
+    class Meta:
+        ordering = ['-id']
 
     def __str__(self):
         return f"{self.id}: {self.title}"
